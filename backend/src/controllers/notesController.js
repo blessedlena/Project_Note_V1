@@ -5,7 +5,7 @@ export async function getAllNotes(req, res) {
     try {
         const notes = await Note.find().sort({ createdAt: -1 }); // Sort by createdAt in descending order (newst first)
         res.status(200).json(notes);
-    } catch (error) {
+    } catch (error) { 
         console.error("Error in getAllNotes controller:", error);
         res.status(500).json({ message: "Internal Server Error" });
     }
