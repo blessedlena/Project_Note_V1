@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-//1. create a sch
-//2. model of the schema
+
 const noteSchema = new mongoose.Schema(
   {
   title: {

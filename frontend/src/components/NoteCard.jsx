@@ -21,7 +21,7 @@ const NoteCard = ( {note}) => {
         </div>
       </div>        
     </Link>
-  )
+  );
 };
 
 export default NoteCard;
