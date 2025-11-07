@@ -13,11 +13,13 @@ console.log("MONGO_URI:", process.env.MONGO_URI);
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(express.json()); // Middleware to parse JSON bodies, this will allow us to get access to req.body
-app.use(rateLimiter);
+
+// Middleware
 app.use(cors(
     {origin: "http://localhost:5173",}   // Allow requests from this origin (frontend server)}
 )); // Enable CORS for all routes
+app.use(express.json()); // Middleware to parse JSON bodies, this will allow us to get access to req.body
+app.use(rateLimiter);
 
 // Prefixing /api/notes
 app.use("/api/notes", notesRoutes); // 
