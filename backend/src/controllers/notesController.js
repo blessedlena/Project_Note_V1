@@ -1,6 +1,5 @@
 import Note from "../models/Note.js";
 
-
 export async function getAllNotes(_, res) {
     try {
         const notes = await Note.find().sort({ createdAt: -1 }); // Sort by createdAt in descending order (newst first)

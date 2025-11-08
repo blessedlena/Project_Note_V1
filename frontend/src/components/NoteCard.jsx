@@ -5,7 +5,6 @@ import toast from "react-hot-toast";
 import { formatDate } from "../lib/utils.js";
 import api from "../lib/axios.js";
 
-
 const NoteCard = ({ note, setNotes }) => {
   const handleDelete = async (e, id) => {
     e.preventDefault(); // get rid of the navigation behaviour
