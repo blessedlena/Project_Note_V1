@@ -9,7 +9,6 @@ import rateLimiter from "./middleware/rateLimiter.js";
 
 
 dotenv.config(); // Load environment variables from .env file
-console.log("MONGO_URI:", process.env.MONGO_URI);
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -39,4 +38,5 @@ connectDB().then(() => {
     console.log("Server started on PORT: 5001");
     });
 });
+
 
